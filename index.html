@@ -17,7 +17,7 @@
 	<body style="margin : 0px; overflow: hidden;">
     <a-scene arjs embedded renderer="logarithmicDepthBuffer: true;antialias: true;" xr-mode-ui="enabled: true" cursor-listener>
 	<a-assets>
-		<video id="evideo" preload="auto" autoplay="true" loop="true" webkit-playsinline playsinline crossorigin="anonymous">
+		<video id="evideo" preload="auto" autoplay="false" loop="true" webkit-playsinline playsinline crossorigin="anonymous">
 		<!-- HEVC video for safari support -->
         <source src="video_hud.mov" type="video/mp4;codecs=hvc1">
           	<!-- WEBM video for chrome and firefox -->
@@ -28,7 +28,8 @@
 		<a-asset-item id="device3" src="notebook.glb"></a-asset-item>
 		<a-asset-item id="device4" src="pc_escritorio.glb"></a-asset-item>
       </a-assets>
-
+		<a-video src="#evideo" width="1" height="1" scale="3 3 3" position="0 0 0" cursor-listener></a-video>
+		<a-text value="Tocar/Touch" align="center" position="0 1 0" rotation="0 0 90" color="white" cursor-listener></a-text>
 		<a-entity gltf-model="#device1" position="3 0 0"scale="1 1 1" animation-mixer="clip:*;timeScale:0.1;"></a-entity>
 		<a-entity gltf-model="#device2" position="-3 0 0" scale="1 1 1" animation-mixer="clip:*;timeScale:0.1;"></a-entity>
 		<a-entity gltf-model="#device3" position="3 5 0" scale="1 1 1" rotation="0 90 0" animation-mixer="clip:abrir;timeScale:0.5;"></a-entity>
@@ -49,7 +50,7 @@
 			});
 			}
 		});
-
 	</script>
 </html>
+
 
