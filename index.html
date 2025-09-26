@@ -60,8 +60,7 @@
 					{
 					vdo.play();
 					vdo2.play();
-					vdo2.stop();
-					setTimeout(()=>{vdo2.stop(); },7000);
+					evt.stopPropagation();
 					}
 					if(this.id=="mac")
 					{
@@ -73,3 +72,4 @@
 		});
 	</script>
 </html>
+
