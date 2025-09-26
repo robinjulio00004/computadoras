@@ -47,8 +47,8 @@
 			init:function(){
 				this.el.addEventListener('click',function(){
 				vdo.play();
-				document.querySelector('#notebook').setAttribute('animation-mixer','clip:abrir;timeScale: 0.5;');
-				setTimeout(()=>{document.querySelector('#notebook').setAttribute('animation-mixer','timeScale: 0;'); },2000);/*retardo de 1000ms*/
+				document.querySelector('#notebook').setAttribute('animation-mixer','clip:abrir;timeScale: 1;');
+				setTimeout(()=>{document.querySelector('#notebook').setAttribute('animation-mixer','timeScale: 0;'); },2000);/*retardo de 2000ms*/
 			});
 			}
 		});
