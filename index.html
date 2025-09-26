@@ -46,12 +46,16 @@
 			init:function(){
 				this.el.addEventListener('click',function (evt){
 				console.log("click",this.id);
-				vdo.play();
-				document.querySelector('#notebook').setAttribute('animation-mixer','clip:abrir;timeScale: 0.5;');
-				setTimeout(()=>{document.querySelector('#notebook').setAttribute('animation-mixer','timeScale: 0;'); },6300);/*retardo de 2000ms*/
-			});
+					if(this.id=="vid")
+					{
+					vdo.play();
+					}else if(this.id=="notebook")
+					{
+					document.querySelector('#notebook').setAttribute('animation-mixer','clip:abrir;timeScale: 0.5;');
+				    setTimeout(()=>{document.querySelector('#notebook').setAttribute('animation-mixer','timeScale: 0;'); },6300);/*retardo de 2000ms*/
+					}
+				});
 			}
 		});
 	</script>
 </html>
-
