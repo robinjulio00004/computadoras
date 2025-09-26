@@ -22,12 +22,19 @@
           	<!-- WEBM video for chrome and firefox -->
         <source src="video_hud.webm" type="video/webm" />
 	</video>
+		<video id="evideo2" preload="auto" autoplay="false" loop="true" webkit-playsinline playsinline crossorigin="anonymous">
+		<!-- HEVC video for safari support -->
+        <source src="logo_hd.mov" type="video/mp4;codecs=hvc1">
+          	<!-- WEBM video for chrome and firefox -->
+        <source src="logo_hd.webm" type="video/webm" />
+	</video>
 		<a-asset-item id="device1" src="macbook.glb"></a-asset-item>
 		<a-asset-item id="device2" src="monitor.glb"></a-asset-item>
 		<a-asset-item id="device3" src="notebook.glb"></a-asset-item>
 		<a-asset-item id="device4" src="pc_escritorio.glb"></a-asset-item>
       </a-assets>
 		<a-video id="vid" src="#evideo" width="1" height="1" scale="3 3 3" cursor-listener></a-video>
+		<a-video id="vid2" src="#evideo2" width="2" height="3" position="3 0 0.1" scale="3 3 3" cursor-listener></a-video>
 		<a-text id="text" value="Tocar/Touch" align="center" width="10" height="10" position="0 1 0" color="red" cursor-listener></a-text>
 		<a-entity id="mac" gltf-model="#device1" position="3 0 0"scale="1 1 1" cursor-listener></a-entity>
 		<a-entity id="monitor" gltf-model="#device2" position="-3 0 0" scale="1 1 1" cursor-listener></a-entity>
