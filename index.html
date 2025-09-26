@@ -69,11 +69,9 @@
 					}
 					if(this.id=="mac")
 					{
-					//const anim_dur = action.abrir.duration;
-					//console.log("duracion_anim: ",anim_dur);
-					document.querySelector('#notebook').setAttribute('animation-mixer','clip:abrir;loop:once;timeScale:0.5;');//clampWhenFinished:true
-					const adur = document.querySelector('#notebook').clipAction(abrir).duration;
-					console.log("duracion_anim: ",adur);
+					document.querySelector('#notebook').setAttribute('animation-mixer','clip:abrir;loop:once;timeScale:0.5;clampWhenFinished:true');
+					const clip = gltf.animations.find((clip)=>clip.name==='abrir');
+					console.log("duracion_anim: ",clip.duration);
 					}
 				});
 			}
