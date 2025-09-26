@@ -57,6 +57,8 @@
 				this.el.addEventListener('click',function (evt){
 				evt.preventDefault();
 				console.log("click",this.id);
+					const ctiempo = vdo2.currentTime;
+					console.log("tiempo: ${ctiempo}");
 					if(this.id=="vid")
 					{
 					vdo.play();
@@ -73,3 +75,4 @@
 		});
 	</script>
 </html>
+
