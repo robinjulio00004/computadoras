@@ -57,13 +57,15 @@
 				this.el.addEventListener('click',function (evt){
 				evt.preventDefault();
 				console.log("click",this.id);
-					const ctiempo = vdo2.currentTime;
-					console.log('tiempo: ${ctiempo}');
+					var dur = vdo2.duration;
+					console.log("duracion: ",dur);
 					if(this.id=="vid")
 					{
 					vdo.play();
 					vdo2.play();
-					setTimeout(()=>{vdo2.pause(); },7500);
+					var ctiempo = vdo2.currentTime;
+					console.log("tiempo: ",ctiempo);
+					setTimeout(()=>{vdo2.pause(); },5000);//7500
 					vdo2.currentTime=0;
 					}
 					if(this.id=="mac")
