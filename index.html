@@ -10,8 +10,8 @@
     <script src="aframe-ar.js"></script>
 	<script src="orbit-controls.js"></script>	
 	<script src="aframe-transparent-video-shader.umd.js"></script>
-	<!--<script src="animation-mixer.js"></script>-->
-	<script src="aframe-extras.js"></script>
+	<script src="animation-mixer.js"></script>
+	<!--<script src="aframe-extras.js"></script>-->
 	</head>
 	
 	<body style="margin : 0px; overflow: hidden;">
@@ -47,8 +47,8 @@
 			init:function(){
 				this.el.addEventListener('click',function(){
 				vdo.play();
-				document.querySelector('#notebook').setAttribute('animation-mixer','clip:abrir;timeScale: 1;');
-				setTimeout(()=>{document.querySelector('#notebook').setAttribute('animation-mixer','timeScale: 0;'); },1000);/*retardo de 1000ms*/
+				document.querySelector('#notebook').setAttribute('animation-mixer','clip:abrir;timeScale: 0.5;');
+				setTimeout(()=>{document.querySelector('#notebook').setAttribute('animation-mixer','timeScale: 0;'); },2000);/*retardo de 1000ms*/
 			});
 			}
 		});
