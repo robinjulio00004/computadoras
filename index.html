@@ -55,12 +55,12 @@
 		AFRAME.registerComponent('cursor-listener', {
 			init:function(){
 				this.el.addEventListener('click',function (evt){
+				evt.preventDefault();
 				console.log("click",this.id);
 					if(this.id=="vid")
 					{
 					vdo.play();
 					vdo2.play();
-					evt.stopPropagation();
 					}
 					if(this.id=="mac")
 					{
@@ -72,4 +72,3 @@
 		});
 	</script>
 </html>
-
