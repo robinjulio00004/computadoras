@@ -57,12 +57,12 @@
 		<a-entity cursor="rayOrigin:mouse"></a-entity>
     </a-scene>
 	</body>
-	<script>		
+	<script>	
+			const vdo=document.querySelector('#evideo');
+			const vdo2=document.querySelector('#evideo2');
+			const dur = vdo2.duration;
 		function funcion_play()
 	{
-		const vdo=document.querySelector('#evideo');
-		const vdo2=document.querySelector('#evideo2');
-		const dur = vdo2.duration;
 	dur = dur*1000;
 	vdo.play();
 	vdo2.play();
@@ -72,4 +72,3 @@
 	}			
 	</script>
 </html>
-
