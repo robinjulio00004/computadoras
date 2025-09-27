@@ -72,29 +72,10 @@
 					/*}
 					if(this.id=="mac")
 					{*/
-				const loader = new GLTFLoader();
-				loader.load('notebook.glb',(gltf)=>{
-			const mixer = new THREE.AnimationMixer(gltf.scene);
-			console.log("duracion_anim: ",mixer);
-			/*const clip = mixer.clipAction(abrir);
-			console.log("duracion_anim: ",clip);*/
-			const clip1 = gltf.animations.find(clip=>clip.name==='abrir');
-			/*const action = mixer.clipAction(clip1);*/
-			console.log("duracion_anim: ",clip1.duration);
-										/*action.play();*/
-		});
-					//document.querySelector('#notebook').setAttribute('animation-mixer','clip:abrir;loop:once;timeScale:0.5;clampWhenFinished:true');
+					document.querySelector('#notebook').setAttribute('animation-mixer','clip:abrir;loop:once;timeScale:0.5;clampWhenFinished:true');
 					}
 				});
 			}
 		});
-		/*loader.load('notebook.glb',(gltf)=>{
-			const mixer = new THREE.AnimationMixer(gltf.scene);
-			const clip = mixer.clipAction(abrir);
-			console.log("duracion_anim: ",clip);
-			const clip1 = gltf.animations.find((clip)=>clip.name==='abrir');
-			const action = mixer.clipAction(clip1);
-			console.log("duracion_anim: ",clip1.duration);
-		});*/
 	</script>
 </html>
