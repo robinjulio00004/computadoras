@@ -13,7 +13,10 @@
 	<script src="aframe-extras.js"></script>
 	</head>
 	
-	<body style="margin : 0px; overflow: hidden;">
+	<body>
+		<div class="buttons">
+ 	 <button id="boton" class="button" type="button" onclick="funcion_play()">Tocar</button>
+		</div>
     <a-scene arjs embedded renderer="logarithmicDepthBuffer: true;antialias: true;" xr-mode-ui="enabled: true" cursor-listener>
 	<a-assets>
 		<video id="evideo" preload="auto" autoplay="false" loop="true" webkit-playsinline playsinline crossorigin="anonymous">
@@ -54,28 +57,16 @@
 	<script>
 		const vdo=document.querySelector('#evideo');
 		const vdo2=document.querySelector('#evideo2');
-		AFRAME.registerComponent('cursor-listener', {
-			init:function(){
-				this.el.addEventListener('click',function (evt){
-				evt.preventDefault();
-					var dur = vdo2.duration;
-					console.log("click",this.id);
-					if(this.id=="vid"|| this.id=="text")
-					{
-					dur = dur*1000;
-					console.log("duracion: ",dur);
-					vdo.play();
-					vdo2.play();
-					setTimeout(()=>{vdo2.pause(); },dur);
-					vdo2.currentTime=0;
-					/*}
-					if(this.id=="mac")
-					{*/
-					document.querySelector('#notebook').setAttribute('animation-mixer','clip:abrir;loop:once;timeScale:0.5;clampWhenFinished:true');
-					}
-				});
-			}
-		});
+		const dur = vdo2.duration;
+		
+		function funcion_play()
+	{
+	dur = dur*1000;
+	vdo.play();
+	vdo2.play();
+	setTimeout(()=>{vdo2.pause(); },dur);
+	vdo2.currentTime=0;
+	document.querySelector('#notebook').setAttribute('animation-mixer','clip:abrir;loop:once;timeScale:0.5;clampWhenFinished:true');
+	}			
 	</script>
 </html>
-
